@@ -3,7 +3,7 @@
 # FILE NAME: settings.py
 # PROJECT NAME: pygame__shmup
 # DATE CREATED: 02/25/2021
-# DATE LAST MODIFIED: 04/03/2021
+# DATE LAST MODIFIED: 05/03/2021
 # PYTHON VER. USED: 3.8
 
 ################### IMPORTS #####################

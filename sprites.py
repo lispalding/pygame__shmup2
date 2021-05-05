@@ -3,7 +3,7 @@
 # FILE NAME: sprites.py
 # PROJECT NAME: pygame__shmup
 # DATE CREATED: 02/25/2021
-# DATE LAST MODIFIED: 04/03/2021
+# DATE LAST MODIFIED: 05/03/2021
 # PYTHON VER. USED: 3.8
 
 ################### IMPORTS ####################
@@ -13,6 +13,7 @@ from os import path
 
 # Custom Imports #
 from settings import *
+from main import *
 ################### FINISHED ###################
 
 class Player(pg.sprite.Sprite):
@@ -52,6 +53,8 @@ class Player(pg.sprite.Sprite):
         self.keypressed = False
 
     def hide(self):
+        """ To use: self.hide()
+        This method hides the player for a set amount of time, but will only be activated after Player looses a life. """
         self.hidden = True
         self.hideTimer = pg.time.get_ticks()
 
@@ -59,7 +62,7 @@ class Player(pg.sprite.Sprite):
 
     def shoot(self):
         """ To use: self.shoot()
-                This function causes a bullet to be shot by the player. """
+        This function causes a bullet to be shot by the player. """
         now = pg.time.get_ticks()
 
         if now - self.lastShot > self.shootDelay:
